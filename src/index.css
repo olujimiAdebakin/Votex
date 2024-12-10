@@ -37,6 +37,20 @@
     border: 0;
 }
 
+.dark{
+    --color-gray-0: #0e0d14;
+    --color-gray-100: #2f2b42;
+    --color-gray-200: #45405e;
+    --color-gray-300: #7b7b7b;
+    --color-gray-400: #919191;
+    --color-gray-500: #a1a1a1;
+    --color-gray-600: #c0c0c0;
+    --color-gray-700: #e6e5e5;
+    --color-gray-800: #fafafa;
+    --color-gray-900: #fff;
+
+}
+
 body{
     font-family: "Montserrat", sans-serif;
     font-size: 0.9rem;
@@ -206,6 +220,12 @@ nav{
     
 }
 
+.nav_container div{
+    display: flex;
+    align-items: center;
+    gap: 20rem;
+}
+
 .nav_container menu{
     display: flex;
     align-items: center;
@@ -230,4 +250,99 @@ menu a{
 
 .nav_toggle_btn{
     display: none;
+    background-color: transparent;
+    color: white;
+    font-size: 30px;
 }
+
+/* ------register------------ */
+
+.register{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.register_container{
+    width: 35rem;
+    background: var(--color-gray-0);
+    padding: 3rem;
+    border-radius: var(--radius-5);
+
+}
+
+.register_container h2{
+    margin-bottom: 2rem;
+    color: var(--color-primary);
+}
+
+.register form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.register form input{
+    padding: 0.7rem;
+    background: var(--color-gray-100);
+    border-radius: var(--radius-1);
+    color: var(--color-gray-900);
+}
+
+.register form p > a {
+    color: var(--color-primary);
+    font-weight: 500;
+}
+
+.form_error-message{
+    background:var(--color-danger);
+    color: var(--color-gray-0);
+    padding: 0.6rem 1.5rem;
+    border-radius:var(--radius-3) ;
+}
+
+
+/* ---------media query--------- */
+/* ---------navbar-------- */
+@media screen and (max-width: 600px) {
+    .container{
+        width: var(--container-w-sm);
+    }
+
+    nav{
+        height: 4rem;
+    }
+
+    .nav_container div{
+        gap: 3rem;
+    }
+
+    .nav_toggle_btn{
+        display: inline-block;
+    }
+
+    .nav_container menu{
+        position: fixed;
+        top: 4rem;
+        right: 0;
+        flex-direction: column;
+        gap: 0;
+        width: 12rem;
+
+    }
+
+    .nav_container menu a{
+        background-color: var(--color-gray-0);
+        color: var(--color-gray-900);
+        border-bottom: 1px solid var(--color-gray-200);
+        width: 100%;
+        place-items: center;
+        height: 4rem;
+        box-shadow: -2rem 4rem 2rem rgba(0, 0, 0, 0.1);
+    }
+
+    .errorPage__container{
+        width: 100%;
+    }
+}
+
