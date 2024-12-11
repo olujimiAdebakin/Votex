@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { candidates } from '../data'
 import CandidateRating from './CandidateRating'
+import { Link } from 'react-router-dom'
 
 
 const ResultElections = ({ id, thumbnail, title }) => {
@@ -28,7 +29,10 @@ const ResultElections = ({ id, thumbnail, title }) => {
               totalVotes={totalVotes}
             />
           ))}
-        </ul>
+              </ul>
+              <Link to={`/elections/${id}/candidates`} className='btn primary full'>
+                  Enter Elections
+              </Link>
       </article>
     </>
   );

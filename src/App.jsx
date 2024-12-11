@@ -7,7 +7,7 @@ import Logout from "./Pages/Logout";
 import Register from "./Pages/Register";
 
 import Result from "./Pages/Result";
-import Candidate from "./Pages/Candidate";
+import Candidate from "./Pages/Candidates";
 import Elections from "./Pages/Elections";
 import Congrats from "./Pages/Congrats";
 import ElectionDetails from "./Pages/ElectionDetails";
