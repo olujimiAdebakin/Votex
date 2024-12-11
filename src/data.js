@@ -41,7 +41,7 @@ export const elections = [
     desc: "The Abuja Mayoral Election will determine who will lead the capital city for the next term. This election is crucial for the growth of the city.",
     thumbnail: Thumbnail3,
     candidates: [
-      { name: "Aliyu", photo: Candidate7 },
+      { name: "Aliyu", photo: Candidate3},
       { name: "Fatimah", photo: Candidate3 },
       { name: "Musa", photo: Candidate1 },
     ],
