@@ -1,7 +1,20 @@
 
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Register = () => {
+
+  const [userData, setUserData] = useState({ fullName: '', Email: "", password: "", password2: "" })
+  
+
+  // function to change our controlled input
+  const changeInputHandler = (e) => {
+    setUserData(prevState => {
+      return {...prevState, [e.target.name]: e.target.value}
+    })
+
+   
+  }
   return (
     <>
       <section className="register">
@@ -13,25 +26,30 @@ const Register = () => {
               type="text"
               placeholder="Full Name"
               autoComplete="true"
+              name='fullName'
               autoFocus
+              onChange={changeInputHandler}
             />
             <input
               type="email"
               placeholder="Email"
               autoComplete="true"
               name="Email"
+              onChange={changeInputHandler}
             />
             <input
               type="password"
               placeholder="Password"
               autoComplete="true"
               name="password"
+              onChange={changeInputHandler}
             />
             <input
               type="password"
               placeholder="Confirm Password"
               autoComplete="true"
-              name="password"
+              name="password2"
+              onChange={changeInputHandler}
             />
             <p>
               Already have an account? <Link href="/">Sign in</Link>
