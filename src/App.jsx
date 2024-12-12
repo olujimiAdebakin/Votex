@@ -40,7 +40,7 @@ const router = createBrowserRouter([
         element: <Congrats />,
       },
       {
-        path: "election/:id/candidates",
+        path: "elections/:id",
         element: <ElectionDetails />,
       },
       {

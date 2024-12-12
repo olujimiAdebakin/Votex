@@ -115,7 +115,7 @@ button{
     background: var(--color-gray-100);
     color: var(--color-gray-900);
     font-weight: 600;
-    padding: 1rem 2rem;
+    padding: 1rem 1rem;
     text-align: center;
     border-radius: var(--radius-1);
     transition: var(--transition);
@@ -631,6 +631,11 @@ color:var(--color-gray-900);
     padding: 1rem 2rem;
 }
 
+.election_info p{
+    color: var(--color-gray-900);
+    font-size: 12px;
+}
+
 .election_info h4{
     margin-bottom: 0.7rem;
     color: var(--color-primary);
@@ -698,6 +703,18 @@ color:var(--color-gray-900);
 
     .modal_content{
         width: var(--container-w-sm);
+    }
+
+    .election{
+        grid-template-columns: 1fr;
+    }
+
+    .election_info{
+        padding: 2re 1rem;
+    }
+
+    .election_image{
+        height: 100%;
     }
 
 }
