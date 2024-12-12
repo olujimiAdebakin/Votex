@@ -1,10 +1,11 @@
-
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = {addCandidateModalShowing: false, voteCandidateModalShowing: false, electionModalShowing: false, updateElectionModalShowing: false}
-
-
-
+const initialState = {
+  addCandidateModalShowing: false,
+  voteCandidateModalShowing: false,
+  electionModalShowing: false,
+  updateElectionModalShowing: false,
+};
 
 const uiSlice = createSlice({
   name: "ui",
@@ -15,51 +16,35 @@ const uiSlice = createSlice({
     },
 
     closeAddCandidateModal(state) {
-      state.addCandidateModalShowing = true;
+      state.addCandidateModalShowing = false; 
     },
 
     openVoteCandidateModal(state) {
       state.voteCandidateModalShowing = true;
     },
 
-
     closeVoteCandidateModal(state) {
-      state.voteCandidateModalShowing = true;
-      },
-    
-        openElectionModal(state) {
+      state.voteCandidateModalShowing = false; 
+    },
+
+    openElectionModal(state) {
       state.electionModalShowing = true;
     },
 
-
     closeElectionModal(state) {
-      state.electionModalShowing = true;
-      },
-    
-        
-        openUpdateElectionModal(state) {
+      state.electionModalShowing = false; 
+    },
+
+    openUpdateElectionModal(state) {
       state.updateElectionModalShowing = true;
     },
 
     closeUpdateElectionModal(state) {
-      state.updateElectionModalShowing = true;
+      state.updateElectionModalShowing = false; 
     },
   },
-  
 });
 
 export const UiActions = uiSlice.actions;
-export default uiSlice;
+export default uiSlice; 
 
-// export const {
-//   openAddCandidateModal,
-//   closeAddCandidateModal,
-//   openVoteCandidateModal,
-//   closeVoteCandidateModal,
-//   openElectionModal,
-//   closeElectionModal,
-//   openUpdateElectionModal,
-//   closeUpdateElectionModal,
-// } = uiSlice.actions;
-
-// export default uiSlice.reducer;

@@ -4,10 +4,13 @@ import Candidate from "../Components/Candidate"
 
 import {candidates as dummyCandidates} from "../data"
 import ConfirmVote from '../Components/ConfirmVote';
+import { useSelector } from 'react-redux';
 
 
 const Candidates = () => {
   const { id } = useParams();
+
+  const voteCandidateModalShowing = useSelector(state => state.ui.voteCandidateModalShowing);
 
   // get candidates that belong to this election
   const candidates = dummyCandidates.filter(candidate => candidate.election === id)
@@ -26,13 +29,13 @@ const Candidates = () => {
         </header>
 
         <div className="container candidates_container">
-          {
-            candidates.map(candidate => <Candidate key={candidate.id} {...candidate}/> )
-          }
+          {candidates.map((candidate) => (
+            <Candidate key={candidate.id} {...candidate} />
+          ))}
         </div>
       </section>
 
-      <ConfirmVote/>
+      {voteCandidateModalShowing && <ConfirmVote />}
     </>
   );
 }
