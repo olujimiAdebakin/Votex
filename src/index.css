@@ -646,6 +646,118 @@ color:var(--color-gray-900);
     gap: 1.2rem;
     margin-top: 1rem;
 }
+
+
+/* --------------Election Details------------- */
+
+.electionDetails{
+    margin: 5rem 0;
+}
+
+.electionDetails_image{
+    height: 15rem;
+    margin: 1.2rem 0 0.8rem;
+}
+
+.electionDetails_container p{
+    color: var(--color-gray-900);
+    font-size: 12px;
+    margin-top: 1rem;
+}
+
+.electionDetails_candidates{
+    margin-top: 2.5rem;
+    padding-top: 2.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(15rem, 1fr));
+    gap: 3rem;
+    border-top: 2px solid var(--color-gray-200);
+}
+
+.electionCandidate{
+    background: var(--color-gray-0);
+    border-radius: var(--radius-4);
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+
+.electionCandidate_image{
+    height: 15rem;
+    overflow: hidden;
+}
+
+.electionCandidate h5{
+    margin: 0.7rem 0 0.3rem;
+}
+
+.electionCandidate small{
+    color: var(--color-gray-900);
+}
+
+.electionCandidate > div:nth-child(2){
+    padding: 1.3rem;
+}
+
+.electionCandidate_btn{
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 1rem;
+    background: var(--color-danger);
+    color: var(--color-gray-0);
+    padding: 0.5rem;
+    font-size: 1.1rem;
+    border-radius: var(--radius-1);
+    display: flex;
+
+}
+
+.electionCandidate_btn:hover{
+    background: var(--color-gray-900);
+}
+
+.add_candidate-btn{
+    background: var(--color-gray-100);
+    border: 2px solid var(--color-primary);
+    border-radius: var(--radius-4);
+    font-size: 5rem;
+    color: var(--color-primary);
+    box-shadow: 0 0.8rem 0.8rem rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+    display: grid;
+    place-items: center;
+    min-height: 15rem;
+}
+
+
+.voters{
+    margin: 6rem 0 3rem;
+}
+
+.voters h2{
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.voters_table{
+    width: 100%;
+}
+
+.voters_table thead th{
+    text-align:left;
+    padding: 0.7rem 1.5rem;
+}
+
+.voters_table tbody td{
+    padding: 0.7rem 1.5rem;
+    color:var(--color-gray-900);
+}
+
+.voters_table tbody tr:nth-child(odd){
+    background: var(--color-gray-0);
+}
+
 /* ---------media query--------- */
 /* ---------navbar-------- */
 @media screen and (max-width: 600px) {
@@ -716,6 +828,19 @@ color:var(--color-gray-900);
     .election_image{
         height: 100%;
     }
+
+    .voters_table thead tr{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .voters_table tbody tr{ 
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+
 
 }
 

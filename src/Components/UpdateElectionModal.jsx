@@ -3,20 +3,18 @@ import { IoMdClose } from "react-icons/io";
 import { useDispatch } from "react-redux";
 import { UiActions } from "../Store/ui-slice";
 
-const AddElectionModal = () => {
+const UpdateElectionModal = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-  const [thumbnail, setThumbnail] = useState(null);
+  const [thumbnail, setThumbnail] = useState("");
 
-    
-    const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
-    // close add election
-    const closeModal = () => {
-        dispatch(UiActions.closeElectionModal())
-    }
-    
-  
+  // close add election
+  const closeModal = () => {
+    dispatch(UiActions.closeUpdateElectionModal());
+  };
+
   const handleFileChange = (e) => {
     const file = e.target.files[0];
     if (file) {
@@ -28,12 +26,12 @@ const AddElectionModal = () => {
     <section className="modal">
       <div className="modal_content">
         <header className="modal_header">
-          <h4>Create New Election</h4>
+          <h4>Edit Election</h4>
           <button className="modal_close" onClick={closeModal}>
             <IoMdClose />
           </button>
         </header>
-        <form >
+        <form>
           <div>
             <h6>Election Title</h6>
             <input
@@ -64,7 +62,7 @@ const AddElectionModal = () => {
             {thumbnail && <p>{thumbnail.name}</p>}
           </div>
           <button type="submit" className="btn primary">
-            Add Election
+            Update Election
           </button>
         </form>
       </div>
@@ -72,4 +70,4 @@ const AddElectionModal = () => {
   );
 };
 
-export default AddElectionModal;
+export default UpdateElectionModal;

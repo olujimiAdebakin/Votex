@@ -1,4 +1,4 @@
-import Thumbnail1 from "./assets/voting-app-assets-main/flag1.jpg";
+import Thumbnail1 from "./assets/voting-app-assets-main/Nigeria Flag.jpg";
 import Thumbnail2 from "./assets/voting-app-assets-main/flag2.jpg";
 import Thumbnail3 from "./assets/voting-app-assets-main/flag3.png";
 import Candidate1 from "./assets/voting-app-assets-main/candidate1.jpg";
@@ -13,11 +13,11 @@ import Candidate7 from "./assets/voting-app-assets-main/candidate7.jpg";
 export const elections = [
   {
     id: "e1",
-    title: "Ogun State Gubernatorial Election 2024",
-    desc: "This election is for the Governor of Ogun State in 2024. Voters will choose the candidate they believe can best lead the state.",
+    title: "Nigeria Presidential Election",
+    desc: "This election is for the President Of Nigeria in 2024. Voters will choose the candidate they believe can best lead the Country.",
     thumbnail: Thumbnail1,
     candidates: [
-      { name: "Tobi", photo: Candidate1 },
+      { name: "Atiku Abubakar", photo: Candidate1 },
       { name: "Tosin", photo: Candidate2 },
       { name: "Tola", photo: Candidate3 },
     ],
@@ -101,25 +101,25 @@ export const elections = [
 export const candidates = [
   {
     id: "c1",
-    fullName: "Adejare Olubayo",
+    fullName: "Peter Gregory Obi",
     image: Candidate1,
-    motto: "For a better future",
+    motto: "From Consumption To Production",
     voteCount: 23,
     election: "e1",
   },
   {
     id: "c2",
-    fullName: "Tobi Ayodele",
+    fullName: "Atiku Abubakar",
     image: Candidate2,
-    motto: "Together we can do more",
+    motto: "Power to the people",
     voteCount: 45,
     election: "e1",
   },
   {
     id: "c3",
-    fullName: "Tosin Fashola",
+    fullName: "Bola Ahmed Tinubu",
     image: Candidate3,
-    motto: "Progress and prosperity",
+    motto: "Renewed Hope",
     voteCount: 37,
     election: "e1",
   },
